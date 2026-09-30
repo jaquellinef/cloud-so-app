@@ -217,22 +217,3 @@ Abaixo está a comparação detalhada coletada diretamente da execução nos doi
 A atividade prática permitiu vivenciar o ciclo completo de desenvolvimento e implantação de uma aplicação web consultando diretamente recursos do SO. A comparação entre os dois ambientes evidenciou a abstração promovida pelos **Containers e pela Virtualização**: enquanto a execução local dependia do sistema de arquivos e hardware do ecossistema Windows, a execução em nuvem operou de forma transparente sob um ambiente hospedeiro Linux de alto desempenho.
 
 ---
-
-## 🚀 Como Salvar este Manual com as Imagens no GitHub
-
-Siga os passos abaixo no terminal do VS Code para incluir as imagens e atualizar seu repositório:
-
-1. **Copie as 3 imagens** para dentro da sua pasta `cloud-so-app` e renomeie-as exatamente com estes nomes:
-   * `metrica_jaque.jpg` (o print da tela do `localhost:3000`)
-   * `tela_render.jpg` (o print da tela do painel do Render com os logs)
-   * `metrica_render.jpg` (o print da tela do site no Render)
-
-2. **Cole os comandos abaixo no terminal do VS Code** e aperte Enter:
-
-```bash
-git add .
-git commit -m "docs: atualiza manual com imagens e dados reais dos testes"
-git push origin main
-```
-
-Pronto! Todas as imagens e o relatório completo estarão visíveis no seu repositório do GitHub.
