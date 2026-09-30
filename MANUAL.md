@@ -1,617 +1,211 @@
-#Manual
-# Please enter the commit message for your changes. Lines starting
-# with '#' will be ignored, and an empty message aborts the commit.
-#
-# On branch main
-#
-# Initial commit
-#
-# Changes to be committed:
-#	new file:   node_modules/.package-lock.json
-#	new file:   node_modules/accepts/HISTORY.md
-#	new file:   node_modules/accepts/LICENSE
-#	new file:   node_modules/accepts/README.md
-#	new file:   node_modules/accepts/index.js
-#	new file:   node_modules/accepts/package.json
-#	new file:   node_modules/body-parser/LICENSE
-#	new file:   node_modules/body-parser/README.md
-#	new file:   node_modules/body-parser/index.js
-#	new file:   node_modules/body-parser/lib/read.js
-#	new file:   node_modules/body-parser/lib/types/json.js
-#	new file:   node_modules/body-parser/lib/types/raw.js
-#	new file:   node_modules/body-parser/lib/types/text.js
-#	new file:   node_modules/body-parser/lib/types/urlencoded.js
-#	new file:   node_modules/body-parser/lib/utils.js
-#	new file:   node_modules/body-parser/node_modules/content-type/LICENSE
-#	new file:   node_modules/body-parser/node_modules/content-type/README.md
-#	new file:   node_modules/body-parser/node_modules/content-type/dist/index.d.ts
-#	new file:   node_modules/body-parser/node_modules/content-type/dist/index.js
-#	new file:   node_modules/body-parser/node_modules/content-type/dist/index.js.map
-#	new file:   node_modules/body-parser/node_modules/content-type/package.json
-#	new file:   node_modules/body-parser/package.json
-#	new file:   node_modules/bytes/History.md
-#	new file:   node_modules/bytes/LICENSE
-#	new file:   node_modules/bytes/Readme.md
-#	new file:   node_modules/bytes/index.js
-#	new file:   node_modules/bytes/package.json
-#	new file:   node_modules/call-bind-apply-helpers/.eslintrc
-#	new file:   node_modules/call-bind-apply-helpers/.github/FUNDING.yml
-#	new file:   node_modules/call-bind-apply-helpers/.nycrc
-#	new file:   node_modules/call-bind-apply-helpers/CHANGELOG.md
-#	new file:   node_modules/call-bind-apply-helpers/LICENSE
-#	new file:   node_modules/call-bind-apply-helpers/README.md
-#	new file:   node_modules/call-bind-apply-helpers/actualApply.d.ts
-#	new file:   node_modules/call-bind-apply-helpers/actualApply.js
-#	new file:   node_modules/call-bind-apply-helpers/applyBind.d.ts
-#	new file:   node_modules/call-bind-apply-helpers/applyBind.js
-#	new file:   node_modules/call-bind-apply-helpers/functionApply.d.ts
-#	new file:   node_modules/call-bind-apply-helpers/functionApply.js
-#	new file:   node_modules/call-bind-apply-helpers/functionCall.d.ts
-#	new file:   node_modules/call-bind-apply-helpers/functionCall.js
-#	new file:   node_modules/call-bind-apply-helpers/index.d.ts
-#	new file:   node_modules/call-bind-apply-helpers/index.js
-#	new file:   node_modules/call-bind-apply-helpers/package.json
-#	new file:   node_modules/call-bind-apply-helpers/reflectApply.d.ts
-#	new file:   node_modules/call-bind-apply-helpers/reflectApply.js
-#	new file:   node_modules/call-bind-apply-helpers/test/index.js
-#	new file:   node_modules/call-bind-apply-helpers/tsconfig.json
-#	new file:   node_modules/call-bound/.eslintrc
-#	new file:   node_modules/call-bound/.github/FUNDING.yml
-#	new file:   node_modules/call-bound/.nycrc
-#	new file:   node_modules/call-bound/CHANGELOG.md
-#	new file:   node_modules/call-bound/LICENSE
-#	new file:   node_modules/call-bound/README.md
-#	new file:   node_modules/call-bound/index.d.ts
-#	new file:   node_modules/call-bound/index.js
-#	new file:   node_modules/call-bound/package.json
-#	new file:   node_modules/call-bound/test/index.js
-#	new file:   node_modules/call-bound/tsconfig.json
-#	new file:   node_modules/content-disposition/LICENSE
-#	new file:   node_modules/content-disposition/README.md
-#	new file:   node_modules/content-disposition/index.js
-#	new file:   node_modules/content-disposition/package.json
-#	new file:   node_modules/content-type/HISTORY.md
-#	new file:   node_modules/content-type/LICENSE
-#	new file:   node_modules/content-type/README.md
-#	new file:   node_modules/content-type/index.js
-#	new file:   node_modules/content-type/package.json
-#	new file:   node_modules/cookie-signature/History.md
-#	new file:   node_modules/cookie-signature/LICENSE
-#	new file:   node_modules/cookie-signature/Readme.md
-#	new file:   node_modules/cookie-signature/index.js
-#	new file:   node_modules/cookie-signature/package.json
-#	new file:   node_modules/cookie/LICENSE
-#	new file:   node_modules/cookie/README.md
-#	new file:   node_modules/cookie/SECURITY.md
-#	new file:   node_modules/cookie/index.js
-#	new file:   node_modules/cookie/package.json
-#	new file:   node_modules/debug/LICENSE
-#	new file:   node_modules/debug/README.md
-#	new file:   node_modules/debug/package.json
-#	new file:   node_modules/debug/src/browser.js
-#	new file:   node_modules/debug/src/common.js
-#	new file:   node_modules/debug/src/index.js
-#	new file:   node_modules/debug/src/node.js
-#	new file:   node_modules/depd/History.md
-#	new file:   node_modules/depd/LICENSE
-#	new file:   node_modules/depd/Readme.md
-#	new file:   node_modules/depd/index.js
-#	new file:   node_modules/depd/lib/browser/index.js
-#	new file:   node_modules/depd/package.json
-#	new file:   node_modules/dunder-proto/.eslintrc
-#	new file:   node_modules/dunder-proto/.github/FUNDING.yml
-#	new file:   node_modules/dunder-proto/.nycrc
-#	new file:   node_modules/dunder-proto/CHANGELOG.md
-#	new file:   node_modules/dunder-proto/LICENSE
-#	new file:   node_modules/dunder-proto/README.md
-#	new file:   node_modules/dunder-proto/get.d.ts
-#	new file:   node_modules/dunder-proto/get.js
-#	new file:   node_modules/dunder-proto/package.json
-#	new file:   node_modules/dunder-proto/set.d.ts
-#	new file:   node_modules/dunder-proto/set.js
-#	new file:   node_modules/dunder-proto/test/get.js
-#	new file:   node_modules/dunder-proto/test/index.js
-#	new file:   node_modules/dunder-proto/test/set.js
-#	new file:   node_modules/dunder-proto/tsconfig.json
-#	new file:   node_modules/ee-first/LICENSE
-#	new file:   node_modules/ee-first/README.md
-#	new file:   node_modules/ee-first/index.js
-#	new file:   node_modules/ee-first/package.json
-#	new file:   node_modules/encodeurl/LICENSE
-#	new file:   node_modules/encodeurl/README.md
-#	new file:   node_modules/encodeurl/index.js
-#	new file:   node_modules/encodeurl/package.json
-#	new file:   node_modules/es-define-property/.eslintrc
-#	new file:   node_modules/es-define-property/.github/FUNDING.yml
-#	new file:   node_modules/es-define-property/.nycrc
-#	new file:   node_modules/es-define-property/CHANGELOG.md
-#	new file:   node_modules/es-define-property/LICENSE
-#	new file:   node_modules/es-define-property/README.md
-#	new file:   node_modules/es-define-property/index.d.ts
-#	new file:   node_modules/es-define-property/index.js
-#	new file:   node_modules/es-define-property/package.json
-#	new file:   node_modules/es-define-property/test/index.js
-#	new file:   node_modules/es-define-property/tsconfig.json
-#	new file:   node_modules/es-errors/.eslintrc
-#	new file:   node_modules/es-errors/.github/FUNDING.yml
-#	new file:   node_modules/es-errors/CHANGELOG.md
-#	new file:   node_modules/es-errors/LICENSE
-#	new file:   node_modules/es-errors/README.md
-#	new file:   node_modules/es-errors/eval.d.ts
-#	new file:   node_modules/es-errors/eval.js
-#	new file:   node_modules/es-errors/index.d.ts
-#	new file:   node_modules/es-errors/index.js
-#	new file:   node_modules/es-errors/package.json
-#	new file:   node_modules/es-errors/range.d.ts
-#	new file:   node_modules/es-errors/range.js
-#	new file:   node_modules/es-errors/ref.d.ts
-#	new file:   node_modules/es-errors/ref.js
-#	new file:   node_modules/es-errors/syntax.d.ts
-#	new file:   node_modules/es-errors/syntax.js
-#	new file:   node_modules/es-errors/test/index.js
-#	new file:   node_modules/es-errors/tsconfig.json
-#	new file:   node_modules/es-errors/type.d.ts
-#	new file:   node_modules/es-errors/type.js
-#	new file:   node_modules/es-errors/uri.d.ts
-#	new file:   node_modules/es-errors/uri.js
-#	new file:   node_modules/es-object-atoms/.eslintrc
-#	new file:   node_modules/es-object-atoms/.github/FUNDING.yml
-#	new file:   node_modules/es-object-atoms/CHANGELOG.md
-#	new file:   node_modules/es-object-atoms/LICENSE
-#	new file:   node_modules/es-object-atoms/README.md
-#	new file:   node_modules/es-object-atoms/RequireObjectCoercible.d.ts
-#	new file:   node_modules/es-object-atoms/RequireObjectCoercible.js
-#	new file:   node_modules/es-object-atoms/ToObject.d.ts
-#	new file:   node_modules/es-object-atoms/ToObject.js
-#	new file:   node_modules/es-object-atoms/index.d.ts
-#	new file:   node_modules/es-object-atoms/index.js
-#	new file:   node_modules/es-object-atoms/isObject.d.ts
-#	new file:   node_modules/es-object-atoms/isObject.js
-#	new file:   node_modules/es-object-atoms/package.json
-#	new file:   node_modules/es-object-atoms/test/index.js
-#	new file:   node_modules/es-object-atoms/tsconfig.json
-#	new file:   node_modules/escape-html/LICENSE
-#	new file:   node_modules/escape-html/Readme.md
-#	new file:   node_modules/escape-html/index.js
-#	new file:   node_modules/escape-html/package.json
-#	new file:   node_modules/etag/HISTORY.md
-#	new file:   node_modules/etag/LICENSE
-#	new file:   node_modules/etag/README.md
-#	new file:   node_modules/etag/index.js
-#	new file:   node_modules/etag/package.json
-#	new file:   node_modules/express/LICENSE
-#	new file:   node_modules/express/Readme.md
-#	new file:   node_modules/express/index.js
-#	new file:   node_modules/express/lib/application.js
-#	new file:   node_modules/express/lib/express.js
-#	new file:   node_modules/express/lib/request.js
-#	new file:   node_modules/express/lib/response.js
-#	new file:   node_modules/express/lib/utils.js
-#	new file:   node_modules/express/lib/view.js
-#	new file:   node_modules/express/package.json
-#	new file:   node_modules/finalhandler/HISTORY.md
-#	new file:   node_modules/finalhandler/LICENSE
-#	new file:   node_modules/finalhandler/README.md
-#	new file:   node_modules/finalhandler/index.js
-#	new file:   node_modules/finalhandler/package.json
-#	new file:   node_modules/forwarded/HISTORY.md
-#	new file:   node_modules/forwarded/LICENSE
-#	new file:   node_modules/forwarded/README.md
-#	new file:   node_modules/forwarded/index.js
-#	new file:   node_modules/forwarded/package.json
-#	new file:   node_modules/fresh/HISTORY.md
-#	new file:   node_modules/fresh/LICENSE
-#	new file:   node_modules/fresh/README.md
-#	new file:   node_modules/fresh/index.js
-#	new file:   node_modules/fresh/package.json
-#	new file:   node_modules/function-bind/.eslintrc
-#	new file:   node_modules/function-bind/.github/FUNDING.yml
-#	new file:   node_modules/function-bind/.github/SECURITY.md
-#	new file:   node_modules/function-bind/.nycrc
-#	new file:   node_modules/function-bind/CHANGELOG.md
-#	new file:   node_modules/function-bind/LICENSE
-#	new file:   node_modules/function-bind/README.md
-#	new file:   node_modules/function-bind/implementation.js
-#	new file:   node_modules/function-bind/index.js
-#	new file:   node_modules/function-bind/package.json
-#	new file:   node_modules/function-bind/test/.eslintrc
-#	new file:   node_modules/function-bind/test/index.js
-#	new file:   node_modules/get-intrinsic/.eslintrc
-#	new file:   node_modules/get-intrinsic/.github/FUNDING.yml
-#	new file:   node_modules/get-intrinsic/.nycrc
-#	new file:   node_modules/get-intrinsic/CHANGELOG.md
-#	new file:   node_modules/get-intrinsic/LICENSE
-#	new file:   node_modules/get-intrinsic/README.md
-#	new file:   node_modules/get-intrinsic/index.js
-#	new file:   node_modules/get-intrinsic/package.json
-#	new file:   node_modules/get-intrinsic/test/GetIntrinsic.js
-#	new file:   node_modules/get-proto/.eslintrc
-#	new file:   node_modules/get-proto/.github/FUNDING.yml
-#	new file:   node_modules/get-proto/.nycrc
-#	new file:   node_modules/get-proto/CHANGELOG.md
-#	new file:   node_modules/get-proto/LICENSE
-#	new file:   node_modules/get-proto/Object.getPrototypeOf.d.ts
-#	new file:   node_modules/get-proto/Object.getPrototypeOf.js
-#	new file:   node_modules/get-proto/README.md
-#	new file:   node_modules/get-proto/Reflect.getPrototypeOf.d.ts
-#	new file:   node_modules/get-proto/Reflect.getPrototypeOf.js
-#	new file:   node_modules/get-proto/index.d.ts
-#	new file:   node_modules/get-proto/index.js
-#	new file:   node_modules/get-proto/package.json
-#	new file:   node_modules/get-proto/test/index.js
-#	new file:   node_modules/get-proto/tsconfig.json
-#	new file:   node_modules/gopd/.eslintrc
-#	new file:   node_modules/gopd/.github/FUNDING.yml
-#	new file:   node_modules/gopd/CHANGELOG.md
-#	new file:   node_modules/gopd/LICENSE
-#	new file:   node_modules/gopd/README.md
-#	new file:   node_modules/gopd/gOPD.d.ts
-#	new file:   node_modules/gopd/gOPD.js
-#	new file:   node_modules/gopd/index.d.ts
-#	new file:   node_modules/gopd/index.js
-#	new file:   node_modules/gopd/package.json
-#	new file:   node_modules/gopd/test/index.js
-#	new file:   node_modules/gopd/tsconfig.json
-#	new file:   node_modules/has-symbols/.eslintrc
-#	new file:   node_modules/has-symbols/.github/FUNDING.yml
-#	new file:   node_modules/has-symbols/.nycrc
-#	new file:   node_modules/has-symbols/CHANGELOG.md
-#	new file:   node_modules/has-symbols/LICENSE
-#	new file:   node_modules/has-symbols/README.md
-#	new file:   node_modules/has-symbols/index.d.ts
-#	new file:   node_modules/has-symbols/index.js
-#	new file:   node_modules/has-symbols/package.json
-#	new file:   node_modules/has-symbols/shams.d.ts
-#	new file:   node_modules/has-symbols/shams.js
-#	new file:   node_modules/has-symbols/test/index.js
-#	new file:   node_modules/has-symbols/test/shams/core-js.js
-#	new file:   node_modules/has-symbols/test/shams/get-own-property-symbols.js
-#	new file:   node_modules/has-symbols/test/tests.js
-#	new file:   node_modules/has-symbols/tsconfig.json
-#	new file:   node_modules/hasown/.github/FUNDING.yml
-#	new file:   node_modules/hasown/.nycrc
-#	new file:   node_modules/hasown/CHANGELOG.md
-#	new file:   node_modules/hasown/LICENSE
-#	new file:   node_modules/hasown/README.md
-#	new file:   node_modules/hasown/eslint.config.mjs
-#	new file:   node_modules/hasown/index.d.ts
-#	new file:   node_modules/hasown/index.js
-#	new file:   node_modules/hasown/package.json
-#	new file:   node_modules/hasown/tsconfig.json
-#	new file:   node_modules/http-errors/HISTORY.md
-#	new file:   node_modules/http-errors/LICENSE
-#	new file:   node_modules/http-errors/README.md
-#	new file:   node_modules/http-errors/index.js
-#	new file:   node_modules/http-errors/package.json
-#	new file:   node_modules/iconv-lite/LICENSE
-#	new file:   node_modules/iconv-lite/README.md
-#	new file:   node_modules/iconv-lite/encodings/dbcs-codec.js
-#	new file:   node_modules/iconv-lite/encodings/dbcs-data.js
-#	new file:   node_modules/iconv-lite/encodings/index.js
-#	new file:   node_modules/iconv-lite/encodings/internal.js
-#	new file:   node_modules/iconv-lite/encodings/sbcs-codec.js
-#	new file:   node_modules/iconv-lite/encodings/sbcs-data-generated.js
-#	new file:   node_modules/iconv-lite/encodings/sbcs-data.js
-#	new file:   node_modules/iconv-lite/encodings/tables/big5-added.json
-#	new file:   node_modules/iconv-lite/encodings/tables/cp936.json
-#	new file:   node_modules/iconv-lite/encodings/tables/cp949.json
-#	new file:   node_modules/iconv-lite/encodings/tables/cp950.json
-#	new file:   node_modules/iconv-lite/encodings/tables/eucjp.json
-#	new file:   node_modules/iconv-lite/encodings/tables/gb18030-ranges.json
-#	new file:   node_modules/iconv-lite/encodings/tables/gbk-added.json
-#	new file:   node_modules/iconv-lite/encodings/tables/shiftjis.json
-#	new file:   node_modules/iconv-lite/encodings/utf16.js
-#	new file:   node_modules/iconv-lite/encodings/utf32.js
-#	new file:   node_modules/iconv-lite/encodings/utf7.js
-#	new file:   node_modules/iconv-lite/lib/bom-handling.js
-#	new file:   node_modules/iconv-lite/lib/helpers/merge-exports.js
-#	new file:   node_modules/iconv-lite/lib/index.d.ts
-#	new file:   node_modules/iconv-lite/lib/index.js
-#	new file:   node_modules/iconv-lite/lib/streams.js
-#	new file:   node_modules/iconv-lite/package.json
-#	new file:   node_modules/iconv-lite/types/encodings.d.ts
-#	new file:   node_modules/inherits/LICENSE
-#	new file:   node_modules/inherits/README.md
-#	new file:   node_modules/inherits/inherits.js
-#	new file:   node_modules/inherits/inherits_browser.js
-#	new file:   node_modules/inherits/package.json
-#	new file:   node_modules/ipaddr.js/LICENSE
-#	new file:   node_modules/ipaddr.js/README.md
-#	new file:   node_modules/ipaddr.js/ipaddr.min.js
-#	new file:   node_modules/ipaddr.js/lib/ipaddr.js
-#	new file:   node_modules/ipaddr.js/lib/ipaddr.js.d.ts
-#	new file:   node_modules/ipaddr.js/package.json
-#	new file:   node_modules/is-promise/LICENSE
-#	new file:   node_modules/is-promise/index.d.ts
-#	new file:   node_modules/is-promise/index.js
-#	new file:   node_modules/is-promise/index.mjs
-#	new file:   node_modules/is-promise/package.json
-#	new file:   node_modules/is-promise/readme.md
-#	new file:   node_modules/math-intrinsics/.eslintrc
-#	new file:   node_modules/math-intrinsics/.github/FUNDING.yml
-#	new file:   node_modules/math-intrinsics/CHANGELOG.md
-#	new file:   node_modules/math-intrinsics/LICENSE
-#	new file:   node_modules/math-intrinsics/README.md
-#	new file:   node_modules/math-intrinsics/abs.d.ts
-#	new file:   node_modules/math-intrinsics/abs.js
-#	new file:   node_modules/math-intrinsics/constants/maxArrayLength.d.ts
-#	new file:   node_modules/math-intrinsics/constants/maxArrayLength.js
-#	new file:   node_modules/math-intrinsics/constants/maxSafeInteger.d.ts
-#	new file:   node_modules/math-intrinsics/constants/maxSafeInteger.js
-#	new file:   node_modules/math-intrinsics/constants/maxValue.d.ts
-#	new file:   node_modules/math-intrinsics/constants/maxValue.js
-#	new file:   node_modules/math-intrinsics/floor.d.ts
-#	new file:   node_modules/math-intrinsics/floor.js
-#	new file:   node_modules/math-intrinsics/isFinite.d.ts
-#	new file:   node_modules/math-intrinsics/isFinite.js
-#	new file:   node_modules/math-intrinsics/isInteger.d.ts
-#	new file:   node_modules/math-intrinsics/isInteger.js
-#	new file:   node_modules/math-intrinsics/isNaN.d.ts
-#	new file:   node_modules/math-intrinsics/isNaN.js
-#	new file:   node_modules/math-intrinsics/isNegativeZero.d.ts
-#	new file:   node_modules/math-intrinsics/isNegativeZero.js
-#	new file:   node_modules/math-intrinsics/max.d.ts
-#	new file:   node_modules/math-intrinsics/max.js
-#	new file:   node_modules/math-intrinsics/min.d.ts
-#	new file:   node_modules/math-intrinsics/min.js
-#	new file:   node_modules/math-intrinsics/mod.d.ts
-#	new file:   node_modules/math-intrinsics/mod.js
-#	new file:   node_modules/math-intrinsics/package.json
-#	new file:   node_modules/math-intrinsics/pow.d.ts
-#	new file:   node_modules/math-intrinsics/pow.js
-#	new file:   node_modules/math-intrinsics/round.d.ts
-#	new file:   node_modules/math-intrinsics/round.js
-#	new file:   node_modules/math-intrinsics/sign.d.ts
-#	new file:   node_modules/math-intrinsics/sign.js
-#	new file:   node_modules/math-intrinsics/test/index.js
-#	new file:   node_modules/math-intrinsics/tsconfig.json
-#	new file:   node_modules/media-typer/HISTORY.md
-#	new file:   node_modules/media-typer/LICENSE
-#	new file:   node_modules/media-typer/README.md
-#	new file:   node_modules/media-typer/index.js
-#	new file:   node_modules/media-typer/package.json
-#	new file:   node_modules/merge-descriptors/index.d.ts
-#	new file:   node_modules/merge-descriptors/index.js
-#	new file:   node_modules/merge-descriptors/license
-#	new file:   node_modules/merge-descriptors/package.json
-#	new file:   node_modules/merge-descriptors/readme.md
-#	new file:   node_modules/mime-db/HISTORY.md
-#	new file:   node_modules/mime-db/LICENSE
-#	new file:   node_modules/mime-db/README.md
-#	new file:   node_modules/mime-db/db.json
-#	new file:   node_modules/mime-db/index.js
-#	new file:   node_modules/mime-db/package.json
-#	new file:   node_modules/mime-types/HISTORY.md
-#	new file:   node_modules/mime-types/LICENSE
-#	new file:   node_modules/mime-types/README.md
-#	new file:   node_modules/mime-types/index.js
-#	new file:   node_modules/mime-types/mimeScore.js
-#	new file:   node_modules/mime-types/package.json
-#	new file:   node_modules/ms/index.js
-#	new file:   node_modules/ms/license.md
-#	new file:   node_modules/ms/package.json
-#	new file:   node_modules/ms/readme.md
-#	new file:   node_modules/negotiator/LICENSE
-#	new file:   node_modules/negotiator/README.md
-#	new file:   node_modules/negotiator/index.js
-#	new file:   node_modules/negotiator/lib/accept.js
-#	new file:   node_modules/negotiator/lib/charset.js
-#	new file:   node_modules/negotiator/lib/encoding.js
-#	new file:   node_modules/negotiator/lib/language.js
-#	new file:   node_modules/negotiator/lib/mediaType.js
-#	new file:   node_modules/negotiator/node_modules/content-type/LICENSE
-#	new file:   node_modules/negotiator/node_modules/content-type/README.md
-#	new file:   node_modules/negotiator/node_modules/content-type/dist/index.d.ts
-#	new file:   node_modules/negotiator/node_modules/content-type/dist/index.js
-#	new file:   node_modules/negotiator/node_modules/content-type/dist/index.js.map
-#	new file:   node_modules/negotiator/node_modules/content-type/package.json
-#	new file:   node_modules/negotiator/package.json
-#	new file:   node_modules/object-inspect/.eslintrc
-#	new file:   node_modules/object-inspect/.github/FUNDING.yml
-#	new file:   node_modules/object-inspect/.nycrc
-#	new file:   node_modules/object-inspect/CHANGELOG.md
-#	new file:   node_modules/object-inspect/LICENSE
-#	new file:   node_modules/object-inspect/example/all.js
-#	new file:   node_modules/object-inspect/example/circular.js
-#	new file:   node_modules/object-inspect/example/fn.js
-#	new file:   node_modules/object-inspect/example/inspect.js
-#	new file:   node_modules/object-inspect/index.js
-#	new file:   node_modules/object-inspect/package-support.json
-#	new file:   node_modules/object-inspect/package.json
-#	new file:   node_modules/object-inspect/readme.markdown
-#	new file:   node_modules/object-inspect/test-core-js.js
-#	new file:   node_modules/object-inspect/test/bigint.js
-#	new file:   node_modules/object-inspect/test/browser/dom.js
-#	new file:   node_modules/object-inspect/test/circular.js
-#	new file:   node_modules/object-inspect/test/deep.js
-#	new file:   node_modules/object-inspect/test/element.js
-#	new file:   node_modules/object-inspect/test/err.js
-#	new file:   node_modules/object-inspect/test/fakes.js
-#	new file:   node_modules/object-inspect/test/fn.js
-#	new file:   node_modules/object-inspect/test/global.js
-#	new file:   node_modules/object-inspect/test/has.js
-#	new file:   node_modules/object-inspect/test/holes.js
-#	new file:   node_modules/object-inspect/test/indent-option.js
-#	new file:   node_modules/object-inspect/test/inspect.js
-#	new file:   node_modules/object-inspect/test/lowbyte.js
-#	new file:   node_modules/object-inspect/test/number.js
-#	new file:   node_modules/object-inspect/test/quoteStyle.js
-#	new file:   node_modules/object-inspect/test/toStringTag.js
-#	new file:   node_modules/object-inspect/test/undef.js
-#	new file:   node_modules/object-inspect/test/values.js
-#	new file:   node_modules/object-inspect/util.inspect.js
-#	new file:   node_modules/on-finished/HISTORY.md
-#	new file:   node_modules/on-finished/LICENSE
-#	new file:   node_modules/on-finished/README.md
-#	new file:   node_modules/on-finished/index.js
-#	new file:   node_modules/on-finished/package.json
-#	new file:   node_modules/once/LICENSE
-#	new file:   node_modules/once/README.md
-#	new file:   node_modules/once/once.js
-#	new file:   node_modules/once/package.json
-#	new file:   node_modules/parseurl/HISTORY.md
-#	new file:   node_modules/parseurl/LICENSE
-#	new file:   node_modules/parseurl/README.md
-#	new file:   node_modules/parseurl/index.js
-#	new file:   node_modules/parseurl/package.json
-#	new file:   node_modules/path-to-regexp/LICENSE
-#	new file:   node_modules/path-to-regexp/Readme.md
-#	new file:   node_modules/path-to-regexp/dist/index.d.ts
-#	new file:   node_modules/path-to-regexp/dist/index.js
-#	new file:   node_modules/path-to-regexp/dist/index.js.map
-#	new file:   node_modules/path-to-regexp/package.json
-#	new file:   node_modules/proxy-addr/HISTORY.md
-#	new file:   node_modules/proxy-addr/LICENSE
-#	new file:   node_modules/proxy-addr/README.md
-#	new file:   node_modules/proxy-addr/index.js
-#	new file:   node_modules/proxy-addr/package.json
-#	new file:   node_modules/qs/.editorconfig
-#	new file:   node_modules/qs/.github/FUNDING.yml
-#	new file:   node_modules/qs/.github/SECURITY.md
-#	new file:   node_modules/qs/.github/THREAT_MODEL.md
-#	new file:   node_modules/qs/.nycrc
-#	new file:   node_modules/qs/CHANGELOG.md
-#	new file:   node_modules/qs/LICENSE.md
-#	new file:   node_modules/qs/README.md
-#	new file:   node_modules/qs/dist/qs.js
-#	new file:   node_modules/qs/eslint.config.mjs
-#	new file:   node_modules/qs/lib/formats.js
-#	new file:   node_modules/qs/lib/index.js
-#	new file:   node_modules/qs/lib/parse.js
-#	new file:   node_modules/qs/lib/stringify.js
-#	new file:   node_modules/qs/lib/utils.js
-#	new file:   node_modules/qs/package.json
-#	new file:   node_modules/qs/test/empty-keys-cases.js
-#	new file:   node_modules/qs/test/parse.js
-#	new file:   node_modules/qs/test/stringify.js
-#	new file:   node_modules/qs/test/utils.js
-#	new file:   node_modules/range-parser/HISTORY.md
-#	new file:   node_modules/range-parser/LICENSE
-#	new file:   node_modules/range-parser/README.md
-#	new file:   node_modules/range-parser/index.js
-#	new file:   node_modules/range-parser/package.json
-#	new file:   node_modules/raw-body/LICENSE
-#	new file:   node_modules/raw-body/README.md
-#	new file:   node_modules/raw-body/index.d.ts
-#	new file:   node_modules/raw-body/index.js
-#	new file:   node_modules/raw-body/package.json
-#	new file:   node_modules/router/HISTORY.md
-#	new file:   node_modules/router/LICENSE
-#	new file:   node_modules/router/README.md
-#	new file:   node_modules/router/index.js
-#	new file:   node_modules/router/lib/layer.js
-#	new file:   node_modules/router/lib/route.js
-#	new file:   node_modules/router/package.json
-#	new file:   node_modules/safer-buffer/LICENSE
-#	new file:   node_modules/safer-buffer/Porting-Buffer.md
-#	new file:   node_modules/safer-buffer/Readme.md
-#	new file:   node_modules/safer-buffer/dangerous.js
-#	new file:   node_modules/safer-buffer/package.json
-#	new file:   node_modules/safer-buffer/safer.js
-#	new file:   node_modules/safer-buffer/tests.js
-#	new file:   node_modules/send/LICENSE
-#	new file:   node_modules/send/README.md
-#	new file:   node_modules/send/index.js
-#	new file:   node_modules/send/package.json
-#	new file:   node_modules/serve-static/LICENSE
-#	new file:   node_modules/serve-static/README.md
-#	new file:   node_modules/serve-static/index.js
-#	new file:   node_modules/serve-static/package.json
-#	new file:   node_modules/setprototypeof/LICENSE
-#	new file:   node_modules/setprototypeof/README.md
-#	new file:   node_modules/setprototypeof/index.d.ts
-#	new file:   node_modules/setprototypeof/index.js
-#	new file:   node_modules/setprototypeof/package.json
-#	new file:   node_modules/setprototypeof/test/index.js
-#	new file:   node_modules/side-channel-list/.editorconfig
-#	new file:   node_modules/side-channel-list/.eslintrc
-#	new file:   node_modules/side-channel-list/.github/FUNDING.yml
-#	new file:   node_modules/side-channel-list/.nycrc
-#	new file:   node_modules/side-channel-list/CHANGELOG.md
-#	new file:   node_modules/side-channel-list/LICENSE
-#	new file:   node_modules/side-channel-list/README.md
-#	new file:   node_modules/side-channel-list/index.d.ts
-#	new file:   node_modules/side-channel-list/index.js
-#	new file:   node_modules/side-channel-list/list.d.ts
-#	new file:   node_modules/side-channel-list/package.json
-#	new file:   node_modules/side-channel-list/test/index.js
-#	new file:   node_modules/side-channel-list/tsconfig.json
-#	new file:   node_modules/side-channel-map/.editorconfig
-#	new file:   node_modules/side-channel-map/.eslintrc
-#	new file:   node_modules/side-channel-map/.github/FUNDING.yml
-#	new file:   node_modules/side-channel-map/.nycrc
-#	new file:   node_modules/side-channel-map/CHANGELOG.md
-#	new file:   node_modules/side-channel-map/LICENSE
-#	new file:   node_modules/side-channel-map/README.md
-#	new file:   node_modules/side-channel-map/index.d.ts
-#	new file:   node_modules/side-channel-map/index.js
-#	new file:   node_modules/side-channel-map/package.json
-#	new file:   node_modules/side-channel-map/test/index.js
-#	new file:   node_modules/side-channel-map/tsconfig.json
-#	new file:   node_modules/side-channel-weakmap/.editorconfig
-#	new file:   node_modules/side-channel-weakmap/.eslintrc
-#	new file:   node_modules/side-channel-weakmap/.github/FUNDING.yml
-#	new file:   node_modules/side-channel-weakmap/.nycrc
-#	new file:   node_modules/side-channel-weakmap/CHANGELOG.md
-#	new file:   node_modules/side-channel-weakmap/LICENSE
-#	new file:   node_modules/side-channel-weakmap/README.md
-#	new file:   node_modules/side-channel-weakmap/index.d.ts
-#	new file:   node_modules/side-channel-weakmap/index.js
-#	new file:   node_modules/side-channel-weakmap/package.json
-#	new file:   node_modules/side-channel-weakmap/test/index.js
-#	new file:   node_modules/side-channel-weakmap/tsconfig.json
-#	new file:   node_modules/side-channel/.editorconfig
-#	new file:   node_modules/side-channel/.eslintrc
-#	new file:   node_modules/side-channel/.github/FUNDING.yml
-#	new file:   node_modules/side-channel/.nycrc
-#	new file:   node_modules/side-channel/CHANGELOG.md
-#	new file:   node_modules/side-channel/LICENSE
-#	new file:   node_modules/side-channel/README.md
-#	new file:   node_modules/side-channel/index.d.ts
-#	new file:   node_modules/side-channel/index.js
-#	new file:   node_modules/side-channel/package.json
-#	new file:   node_modules/side-channel/test/index.js
-#	new file:   node_modules/side-channel/tsconfig.json
-#	new file:   node_modules/statuses/HISTORY.md
-#	new file:   node_modules/statuses/LICENSE
-#	new file:   node_modules/statuses/README.md
-#	new file:   node_modules/statuses/codes.json
-#	new file:   node_modules/statuses/index.js
-#	new file:   node_modules/statuses/package.json
-#	new file:   node_modules/toidentifier/HISTORY.md
-#	new file:   node_modules/toidentifier/LICENSE
-#	new file:   node_modules/toidentifier/README.md
-#	new file:   node_modules/toidentifier/index.js
-#	new file:   node_modules/toidentifier/package.json
-#	new file:   node_modules/type-is/HISTORY.md
-#	new file:   node_modules/type-is/LICENSE
-#	new file:   node_modules/type-is/README.md
-#	new file:   node_modules/type-is/index.js
-#	new file:   node_modules/type-is/node_modules/content-type/LICENSE
-#	new file:   node_modules/type-is/node_modules/content-type/README.md
-#	new file:   node_modules/type-is/node_modules/content-type/dist/index.d.ts
-#	new file:   node_modules/type-is/node_modules/content-type/dist/index.js
-#	new file:   node_modules/type-is/node_modules/content-type/dist/index.js.map
-#	new file:   node_modules/type-is/node_modules/content-type/package.json
-#	new file:   node_modules/type-is/package.json
-#	new file:   node_modules/unpipe/HISTORY.md
-#	new file:   node_modules/unpipe/LICENSE
-#	new file:   node_modules/unpipe/README.md
-#	new file:   node_modules/unpipe/index.js
-#	new file:   node_modules/unpipe/package.json
-#	new file:   node_modules/vary/HISTORY.md
-#	new file:   node_modules/vary/LICENSE
-#	new file:   node_modules/vary/README.md
-#	new file:   node_modules/vary/index.js
-#	new file:   node_modules/vary/package.json
-#	new file:   node_modules/wrappy/LICENSE
-#	new file:   node_modules/wrappy/README.md
-#	new file:   node_modules/wrappy/package.json
-#	new file:   node_modules/wrappy/wrappy.js
-#	new file:   package-lock.json
-#	new file:   package.json
-#	new file:   server.js
-#
-# Untracked files:
-#	manual_de_desenvolvimento_e_sistemas_operacionais.md
-#
+# 📖 Manual de Desenvolvimento, Publicação e Análise de Sistemas Operacionais
+
+**Aplicação:** `cloud-so-app`
+
+**Autora:** Jaquelline (`jaquellinef`)
+
+**Repositório:** [github.com/jaquellinef/cloud-so-app](https://github.com/jaquellinef/cloud-so-app)
+
+**Ambiente Cloud (Render):** [cloud-so-app-jaque.onrender.com](https://cloud-so-app-jaque.onrender.com)
+
+## 1. Introdução
+
+Este manual documenta o ciclo de vida completo de desenvolvimento, teste local, hospedagem em nuvem e análise conceitual de Sistemas Operacionais da aplicação web **`cloud-so-app`**. A aplicação foi desenvolvida em JavaScript/Node.js utilizando o framework **Express.js** e o módulo nativo **`os`**, permitindo consultar e exibir métricas em tempo real do sistema operacional sob o qual a aplicação está sendo executada.
+
+## 2. Instalação das Ferramentas e Pré-requisitos
+
+Para a execução deste projeto, foram instaladas e configuradas as seguintes ferramentas:
+
+1. **Node.js (v24.x LTS / npm):**
+
+   * Ambiente de execução para código JavaScript fora do navegador.
+
+   * *Verificação no terminal:* `node -v` e `npm -v`.
+
+2. **Git:**
+
+   * Sistema de controle de versão distribuído para rastreamento e envio do código-fonte.
+
+   * *Verificação no terminal:* `git --version`.
+
+3. **Visual Studio Code (VS Code):**
+
+   * Editor de código-fonte utilizado para a escrita, organização de arquivos e execução de comandos pelo terminal integrado.
+
+## 3. Criação do Projeto e Desenvolvimento da Aplicação
+
+### 3.1. Estrutura de Arquivos
+
+O projeto foi estruturado na pasta `cloud-so-app` com os seguintes arquivos essenciais:
+
+```
+cloud-so-app/
+├── node_modules/        # Dependências instaladas (Express)
+├── .gitignore          # Arquivo para ignorar a pasta node_modules no Git
+├── package.json        # Arquivo de manifesto e scripts do Node.js
+├── package-lock.json   # Mapeamento exato de versões das dependências
+└── server.js           # Código-fonte principal da aplicação
+
+```
+
+### 3.2. Inicialização e Instalação do Framework
+
+No terminal integrado do VS Code, o projeto foi inicializado e o Express instalado com os comandos:
+
+```
+npm init -y
+npm install express
+
+```
+
+### 3.3. Configuração do `.gitignore`
+
+Foi criado o arquivo `.gitignore` contendo a instrução abaixo para impedir o envio de arquivos pesados e desnecessários ao repositório remoto:
+
+```
+node_modules
+
+```
+
+### 3.4. Código-Fonte (`server.js`)
+
+O arquivo `server.js` importa o módulo nativo `os` para coletar dados do hardware/SO e o módulo `express` para servir a página web na porta atribuída dinamicamente (`process.env.PORT || 3000`).
+
+```
+const express = require('express');
+const os = require('os');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+    // Coleta de métricas do sistema operacional via módulo 'os'
+    const hostname = os.hostname();
+    const platform = os.platform();
+    const arch = os.arch();
+    const cpus = os.cpus();
+    const totalMemory = (os.totalmem() / (1024 ** 3)).toFixed(2); // Conversão para GB
+    const freeMemory = (os.freemem() / (1024 ** 3)).toFixed(2);   // Conversão para GB
+    const uptimeHours = (os.uptime() / 3600).toFixed(2);         // Conversão para Horas
+
+    // Interface visual responsiva
+    const htmlContent = `
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Painel do Sistema Operacional - cloud-so-app</title>
+        <style>
+            body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; margin: 0; padding: 30px; }
+            .card { max-width: 650px; margin: 0 auto; background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+            h1 { color: #1a73e8; text-align: center; margin-bottom: 25px; border-bottom: 2px solid #e8eaed; padding-bottom: 10px; }
+            .metric { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #f1f3f4; }
+            .metric:last-child { border-bottom: none; }
+            .label { font-weight: 600; color: #3c4043; }
+            .value { color: #1a73e8; font-family: 'Courier New', Courier, monospace; font-weight: bold; }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <h1>Métricas do Sistema Operacional</h1>
+            <div class="metric"><span class="label">Nome do Host (Hostname):</span> <span class="value">${hostname}</span></div>
+            <div class="metric"><span class="label">Plataforma (SO):</span> <span class="value">${platform}</span></div>
+            <div class="metric"><span class="label">Arquitetura:</span> <span class="value">${arch}</span></div>
+            <div class="metric"><span class="label">Núcleos de CPU:</span> <span class="value">${cpus.length} x ${cpus[0]?.model || 'Desconhecido'}</span></div>
+            <div class="metric"><span class="label">Memória RAM Total:</span> <span class="value">${totalMemory} GB</span></div>
+            <div class="metric"><span class="label">Memória RAM Livre:</span> <span class="value">${freeMemory} GB</span></div>
+            <div class="metric"><span class="label">Tempo de Atividade (Uptime):</span> <span class="value">${uptimeHours} horas</span></div>
+        </div>
+    </body>
+    </html>
+    `;
+
+    res.send(htmlContent);
+});
+
+app.listen(PORT, () => {
+    console.log(`Servidor rodando em http://localhost:${PORT}`);
+});
+
+```
+
+## 4. Teste Local e Solução de Problemas
+
+1. **Execução:** No terminal do VS Code, a aplicação foi iniciada com o comando `node server.js`.
+
+2. **Acesso:** Abrindo o navegador no endereço `http://localhost:3000`, a página renderizou com sucesso as informações do hardware local.
+
+3. **Resolução do erro de extensão (`MODULE_NOT_FOUND`):** O Windows salvou o arquivo como `server.js.txt` inicialmente. O arquivo foi ajustado para `server.js` na raiz do projeto para garantir a localização do módulo de entrada pelo runtime do Node.js.
+
+## 5. Versionamento (GitHub) e Publicação na Nuvem (Render)
+
+### 5.1. Envio para o GitHub
+
+Os comandos de versionamento utilizados foram:
+
+```
+git init
+git add .
+git commit -m "Primeiro commit da aplicacao cloud-so-app"
+git branch -M main
+git remote add origin https://github.com/jaquellinef/cloud-so-app.git
+git push -u origin main
+
+```
+
+*Nota de solução de erro:* Para contornar a restrição de privacidade do e-mail do GitHub (`GH007: Your push would publish a private email address`), a opção de bloqueio de envios por linha de comando foi ajustada nas configurações da conta (`settings/emails`), permitindo a conclusão do *push*.
+
+### 5.2. Hospedagem no Render
+
+1. Autenticação via GitHub realizada no painel do Render.
+
+2. Criação de um novo **Web Service** vinculado ao repositório `cloud-so-app`.
+
+3. Configurações aplicadas:
+
+   * **Runtime / Language:** `Node`
+
+   * **Build Command:** `npm install`
+
+   * **Start Command:** `node server.js`
+
+   * **Instance Type:** `Free`
+
+4. Implantação efetuada com sucesso, gerando o link público da aplicação.
+
+## 6. Análise Comparativa: Ambiente Local vs. Ambiente Cloud
+
+| **Métrica do Sistema** | **Execução Local (Máquina Física)** | **Execução na Nuvem (Render / Cloud)** | 
+| **Hostname** | Nome da máquina local (ex: `DESKTOP-PC`) | ID do Container Isolado (ex: `srv-c...`) | 
+| **Plataforma (SO)** | `win32` (Windows) | `linux` (Linux Server) | 
+| **Arquitetura** | `x64` | `x64` | 
+| **Núcleos de CPU** | Processador físico completo do computador | Processador virtualizado do cluster | 
+| **Memória RAM Total** | RAM física instalada (ex: 8 GB ou 16 GB) | Cota virtual limitada do plano gratuito (\~512 MB) | 
+| **Uptime (Atividade)** | Tempo acumulado desde o boot do computador | Tempo desde o deploy/start do container no Render | 
+
+## 7. Aplicação Prática dos Conceitos de Sistemas Operacionais
+
+1. **Processos:**
+   Ao executar `node server.js`, o SO cria uma estrutura na memória conhecida como **PCB (Process Control Block)**, atribui um **PID (Process ID)** único e agenda a execução na CPU.
+
+2. **Gerenciamento de Memória:**
+   As chamadas `os.freemem()` e `os.totalmem()` realizam chamadas de sistema (*system calls*) ao Kernel. O Kernel gerencia a memória virtual para garantir isolamento e proteção entre processos.
+
+3. **Uso de CPU e Escalonamento:**
+   O Node.js roda no espaço do usuário (*User Space*). A alocação de tempo de CPU é gerenciada pelo **Escalonador de Processos (Scheduler)** do Kernel.
+
+4. **Sistema Operacional Hospedeiro (Host OS):**
+   No servidor remoto, o SO nativo é uma distribuição Linux voltada para servidores em data centers.
+
+5. **Virtualização e Containers:**
+   No Render, a aplicação não roda diretamente no hardware bare-metal, mas dentro de um container isolado. Por isso, o `hostname` exibe o identificador do container e a RAM reflete a cota do ambiente virtual.
+
+6. **Computação em Nuvem (Cloud Computing):**
+   Proporciona abstração de infraestrutura e viabiliza a implantação contínua (CI/CD) com alta disponibilidade e acesso público universal.
+
+## 8. Conclusões Finais
+
+A atividade prática demonstrou a importância das chamadas de sistema e da abstração fornecida pelos Sistemas Operacionais modernos. Através do desenvolvimento da aplicação `cloud-so-app` e sua comparação entre os ambientes local e em nuvem, foi possível evidenciar o papel dos **Containers e da Virtualização** no isolamento e limitação de recursos, destacando a eficiência da computação em nuvem na publicação de software.
+
+```
