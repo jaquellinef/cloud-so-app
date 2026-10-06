@@ -1,0 +1,15 @@
+# Dependências do projeto
+node_modules/
+
+# Arquivos de ambiente e segredos
+.env
+.env.local
+
+# Arquivos de compilação / build
+dist/
+build/
+
+# Arquivos do sistema operacional ou da IDE
+.DS_Store
+.vscode/
+*.log
