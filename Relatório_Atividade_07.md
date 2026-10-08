@@ -4,7 +4,7 @@
 **Autora:** Jaquelline (`jaquellinef`)  
 **Repositório:** [github.com/jaquellinef/cloud-so-app](https://github.com/jaquellinef/cloud-so-app)  
 **Ambiente Cloud (Render):** [cloud-so-app-jaque.onrender.com](https://cloud-so-app-jaque.onrender.com)  
-**Ambiente Cloud (Railway):** [cloud-so-app | Dashboard Executivo de SO](https://sistemas-operacionais-production-af4e.up.railway.app/)
+**Ambiente Cloud (Railway):** [cloud-so-app | Dashboard Executivo de SO](https://sistemas-operacionais-production-af4e.up.railway.app/)  
 
 ---
 
