@@ -1,4 +1,12 @@
-# Relatório de Implantação e Monitoramento de SO em Ambiente Cloud (PaaS)
+# Relatório de Implantação e Monitoramento de SO em Ambiente Cloud (PaaS) - (Render vs. Railway) 🚀
+
+**Aplicação:** `cloud-so-app`  
+**Autora:** Jaquelline (`jaquellinef`)  
+**Repositório:** [github.com/jaquellinef/cloud-so-app](https://github.com/jaquellinef/cloud-so-app)  
+**Ambiente Cloud (Render):** [cloud-so-app-jaque.onrender.com](https://cloud-so-app-jaque.onrender.com)  
+**Ambiente Cloud (Railway):** [cloud-so-app | Dashboard Executivo de SO](https://sistemas-operacionais-production-af4e.up.railway.app/)
+
+---
 
 ## 1. Visão Geral do Projeto
 
@@ -66,7 +74,7 @@ Em uma análise posterior de estresse/monitoramento contínuo:
 - **Tempo Ligado (Uptime):** 53 dias, 5 horas, 10 minutos
 - **Armazenamento:** 67.45 GB de espaço livre em disco (82.6% Usado)
 
-![Dashboard de Monitoramento no Render - Visão 2](Captura%20de%20tela%202026-10-Railway.png)
+![Dashboard de Monitoramento no Render - Visão 2](Captura%20de%20tela%202026-10-Render.png)
 
 ---
 
@@ -89,3 +97,4 @@ Em uma análise posterior de estresse/monitoramento contínuo:
 A aplicação **`cloud-so-app`** demonstrou total compatibilidade em ambos os ambientes PaaS testados:
 1. **Railway:** Apresentou uma infraestrutura robusta com suporte a instâncias multicore avançadas (48 vCPUs e 322 GB de RAM no host containerizado).
 2. **Render:** Ofereceu estabilidade contínua, mantendo o uptime do serviço em níveis adequados e fornecendo métricas precisas sobre o ecossistema Node.js e kernel AWS Linux.
+
