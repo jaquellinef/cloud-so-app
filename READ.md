@@ -87,8 +87,9 @@ Prover uma solução leve, independente e visualmente atrativa para inspecionar 
  |          (Interface Web Vintage CRT ou Consumidor da API REST)        |
  +-----------------------------------+-----------------------------------+
                                      |
-                                     | Requisições HTTP (GET / ou /api/metrics)
-                                     v
+                                     | Requisições HTTP
+                                     |(GET / ou /api/metrics)
+                                     |     v
  +-----------------------------------------------------------------------+
  |                          EXPRESS.JS SERVER                            |
  |                           (Porta 3000 / $PORT)                        |
@@ -288,7 +289,7 @@ Uma explicação clara e concisa do problema identificado.
 2. Observar o comportamento '...'
 
 **Comportamento Esperado:**
-O que deveria ter acontecido.
+O projeto ser executado em ambiente virtual e local.
 ```
 
 ---
@@ -300,7 +301,7 @@ A **Wiki do repositório** no GitHub foi estruturada em seções para aprofundam
 ### Páginas da Wiki:
 1. **`Home`**: Apresentação da Wiki e guia rápido de navegação.
 2. **`Conceitos-de-SO-e-Kernel`**: Explicação teórica sobre chamadas de sistema (*system calls*), gerenciamento de processos (PCB) e algoritmos de escalonamento.
-3. **`Virtualização x Conteinerização`**: Estudo comparativo detalhado das diferenças entre os resultados obtidos em execuções *Bare-Metal* no Windows e contêineres Linux PaaS.
+3. **`Virtualização Bare‐Metal x Conteinerização em Nuvem`**: Estudo comparativo detalhado das diferenças entre os resultados obtidos em execuções *Bare-Metal* no Windows e contêineres Linux PaaS.
 4. **`Guia de Estilização: Vintage`**: Especificações de design, variáveis CSS3 e conjunto de ícones SVG utilizados no tema retrô CRT.
 5. **`Troubleshooting e FAQ`**: Soluções para problemas comuns de permissão de acesso a métricas do sistema e portas em uso.
 
