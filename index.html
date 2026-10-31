@@ -1,244 +1,159 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-PT">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🌿 Dashboard de Sistemas Operacionais</title>
+  <title>cloud-so-app | Painel Vintage de Monitorização do SO</title>
+
+  <!-- Tipografia Vintage -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #F7F4EF;          /* Areia suave */
-      --card-bg: #FFFFFF;           /* Branco puro */
-      --border-color: #E2D9CC;       /* Bege terroso */
-      --text-main: #2C2623;          /* Café escuro (alta legibilidade) */
-      --terracotta: #B85B35;         /* Terracota */
-      --sage: #6B7A63;               /* Verde Sábia */
-      --mustard: #D9A05B;            /* Mostarda / Palha */
-      --shadow: 0 4px 12px rgba(44, 38, 35, 0.06);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      padding: 2rem 1rem;
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 2.5rem;
-      padding: 1.5rem;
-      background: var(--card-bg);
-      border-radius: 20px;
-      border: 2px solid var(--border-color);
-      box-shadow: var(--shadow);
-    }
-
-    header h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--terracotta);
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      color: var(--sage);
-      font-weight: 600;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border: 2px solid var(--border-color);
-      border-radius: 18px;
-      padding: 1.5rem;
-      box-shadow: var(--shadow);
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-3px);
-    }
-
-    .card-header {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px dashed var(--border-color);
-    }
-
-    .card-header h2 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--terracotta);
-    }
-
-    .icon {
-      font-size: 1.6rem;
-    }
-
-    .info-group {
-      margin-bottom: 0.75rem;
-    }
-
-    .info-label {
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: var(--sage);
-    }
-
-    .info-value {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--text-main);
-    }
-
-    .badge {
-      display: inline-block;
-      background-color: var(--mustard);
-      color: #FFFFFF;
-      padding: 0.25rem 0.75rem;
-      border-radius: 12px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-top: 0.5rem;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: var(--sage);
-      font-weight: 600;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
+<body class="theme-crt-amber">
+  <div class="crt-overlay"></div>
+  
   <div class="container">
-    <header>
-      <h1>🌿 Dashboard de Sistemas Operacionais</h1>
-      <p>🪵 Monitoramento do Ambiente &amp; Métricas do Kernel 🌾</p>
+    <!-- Cabeçalho Teletype -->
+    <header class="vintage-header">
+      <div class="header-top">
+        <div class="terminal-badge">
+          <span class="blinking-dot">●</span> SYSTEM MONITOR v2.0 // TERMINAL #01
+        </div>
+        <div class="theme-selector">
+          <label for="themeSelect">ESTILO VINTAGE:</label>
+          <select id="themeSelect">
+            <option value="theme-crt-amber">CRT Âmbar (1978)</option>
+            <option value="theme-crt-green">CRT Verde Fósforo (1982)</option>
+            <option value="theme-parchment">Papel Teleimpressor (1965)</option>
+          </select>
+        </div>
+      </div>
+      <h1>
+        <svg class="icon-hdr" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+          <line x1="8" y1="21" x2="16" y2="21"></line>
+          <line x1="12" y1="17" x2="12" y2="21"></line>
+        </svg>
+        PAINEL DE CONTROL DO SISTEMA OPERATIVO
+      </h1>
+      <p class="subtitle">
+        Aplicação: <strong>cloud-so-app</strong> | Provedor: <span id="envName">A carregar...</span>
+      </p>
     </header>
 
-    <div class="grid">
-      <!-- Card Sistema Operacional -->
-      <div class="card">
-        <div class="card-header">
-          <span class="icon">💻</span>
-          <h2>Sistema Operacional</h2>
+    <!-- Barra de Estado -->
+    <div class="status-bar">
+      <div class="status-card">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
         </div>
-        <div class="info-group">
-          <div class="info-label">Plataforma (SO)</div>
-          <div class="info-value" id="so-nome">Carregando...</div>
-        </div>
-        <div class="info-group">
-          <div class="info-label">Arquitetura</div>
-          <div class="info-value" id="so-arch">Carregando...</div>
+        <div class="card-info">
+          <span class="label">ESTADO GERAL</span>
+          <span class="val" id="sysStatus">---</span>
         </div>
       </div>
 
-      <!-- Card Processador -->
-      <div class="card">
-        <div class="card-header">
-          <span class="icon">⚡</span>
-          <h2>Processador</h2>
+      <div class="status-card">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"></rect><rect x="2" y="14" width="20" height="8" rx="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
         </div>
-        <div class="info-group">
-          <div class="info-label">Modelo de CPU</div>
-          <div class="info-value" id="cpu-modelo">Carregando...</div>
-        </div>
-        <div class="info-group">
-          <div class="info-label">Núcleos Disponíveis</div>
-          <div class="info-value" id="cpu-cores">Carregando...</div>
+        <div class="card-info">
+          <span class="label">MEMÓRIA RAM</span>
+          <span class="val" id="ramPercent">0%</span>
+          <div class="progress-bar-bg"><div class="progress-bar-fill" id="ramFill"></div></div>
         </div>
       </div>
 
-      <!-- Card Memória RAM -->
-      <div class="card">
-        <div class="card-header">
-          <span class="icon">🪨</span>
-          <h2>Memória RAM</h2>
+      <div class="status-card">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
         </div>
-        <div class="info-group">
-          <div class="info-label">Total / Livre</div>
-          <div class="info-value" id="ram-info">Carregando...</div>
-        </div>
-        <div class="info-group">
-          <div class="info-label">Status</div>
-          <div id="ram-badge" class="badge">Analisando</div>
+        <div class="card-info">
+          <span class="label">UPTIME (TEMPO LIGADO)</span>
+          <span class="val" id="sysUptime">0h 0m 0s</span>
         </div>
       </div>
 
-      <!-- Card Ambiente e Uptime -->
-      <div class="card">
-        <div class="card-header">
-          <span class="icon">🪴</span>
-          <h2>Ambiente de Execução</h2>
+      <div class="status-card">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
         </div>
-        <div class="info-group">
-          <div class="info-label">Tempo Ativo (Uptime)</div>
-          <div class="info-value" id="uptime-info">Carregando...</div>
-        </div>
-        <div class="info-group">
-          <div class="info-label">Tipo de Hospedagem</div>
-          <div class="info-value" id="ambiente-tipo">Detectando...</div>
+        <div class="card-info">
+          <span class="label">ENDEREÇO IP PRINCIPAL</span>
+          <span class="val" id="mainIP">0.0.0.0</span>
         </div>
       </div>
     </div>
 
-    <footer>
-      ✨ Relatório Técnico de SO • Desenvolvimento &amp; Nuvem ✨
+    <!-- Módulos de Informação -->
+    <div class="grid">
+      <div class="card">
+        <div class="card-header">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          <h3>SO & AMBIENTE DA NUVEM</h3>
+        </div>
+        <ul>
+          <li><span>Hostname:</span> <strong id="valHostname">...</strong></li>
+          <li><span>Plataforma (SO):</span> <strong id="valPlatform">...</strong></li>
+          <li><span>Versão do Kernel:</span> <strong id="valKernel">...</strong></li>
+          <li><span>Arquitetura:</span> <strong id="valArch">...</strong></li>
+          <li><span>Versão do Node.js:</span> <strong id="valNode">...</strong></li>
+          <li><span>Porta Ativa:</span> <strong id="valPort">...</strong></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="15" x2="23" y2="15"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="15" x2="4" y2="15"></line></svg>
+          <h3>PROCESSADOR (CPU)</h3>
+        </div>
+        <ul>
+          <li><span>Modelo da CPU:</span> <strong id="valCpuModel">...</strong></li>
+          <li><span>Núcleos (vCPUs):</span> <strong id="valCpuCores">...</strong></li>
+          <li><span>Processos Ativos:</span> <strong id="valProcessCount">...</strong></li>
+          <li><span>PID do Processo:</span> <strong id="valPid">...</strong></li>
+          <li><span>Node Heap Alocado:</span> <strong id="valHeap">...</strong></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12D12 2 2 12 2 22h20Z"></path><ellipse cx="12" cy="12" rx="10" ry="4"></ellipse></svg>
+          <h3>MEMÓRIA & DISCO</h3>
+        </div>
+        <ul>
+          <li><span>RAM Total:</span> <strong id="valRamTotal">...</strong></li>
+          <li><span>RAM Livre:</span> <strong id="valRamFree">...</strong></li>
+          <li><span>RAM Em Uso:</span> <strong id="valRamUsed">...</strong></li>
+          <li><span>Ponto de Montagem:</span> <strong id="valDiskMount">...</strong></li>
+          <li><span>Espaço Livre em Disco:</span> <strong id="valDiskFree">...</strong></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          <h3>VÍDEO, SOM & ENERGIA</h3>
+        </div>
+        <ul>
+          <li><span>Ecrã / Display:</span> <strong id="valDisplay">...</strong></li>
+          <li><span>Resolução:</span> <strong id="valResolution">...</strong></li>
+          <li><span>Placa de Som:</span> <strong id="valAudio">...</strong></li>
+          <li><span>Fonte de Alimentação:</span> <strong id="valPower">...</strong></li>
+          <li><span>Bateria:</span> <strong id="valBattery">...</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="vintage-footer">
+      <p>⚡ MONITOR DE SISTEMAS OPERATIVOS // TEMA VINTAGE // TELETYPE & CRT SIMULATOR ⚡</p>
+      <p>Atualização automática a cada 5 segundos • API REST: <code>/api/metrics</code></p>
     </footer>
   </div>
 
-  <script>
-    async function carregarMetricas() {
-      try {
-        const res = await fetch('/api/metricas');
-        const data = await res.json();
-
-        document.getElementById('so-nome').textContent = data.platform || 'Desconhecido';
-        document.getElementById('so-arch').textContent = data.arch || 'x64';
-        document.getElementById('cpu-modelo').textContent = data.cpuModel || 'CPU Virtual/Física';
-        document.getElementById('cpu-cores').textContent = (data.cpuCores || '1') + ' núcleo(s)';
-        document.getElementById('ram-info').textContent = `${data.freeMem || '0'} MB / ${data.totalMem || '0'} MB`;
-        document.getElementById('uptime-info').textContent = (data.uptime || '0') + ' segundos';
-        
-        const ambiente = data.platform.includes('win') ? 'Local (Windows)' : 'Nuvem PaaS (Linux Container)';
-        document.getElementById('ambiente-tipo').textContent = ambiente;
-        document.getElementById('ram-badge').textContent = 'Ativo 🌿';
-      } catch (err) {
-        console.error('Erro ao buscar métricas:', err);
-      }
-    }
-
-    carregarMetricas();
-    setInterval(carregarMetricas, 5000);
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>
