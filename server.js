@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 // Servir ficheiros estáticos da pasta 'public'
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Deteção de Ambiente Cloud
+// 1. Deteção do Ambiente de Execução (Local vs Cloud PaaS)
 function detectEnvironment() {
   if (process.env.RENDER || process.env.RENDER_SERVICE_ID) {
     return { name: 'Render (Cloud PaaS)', isCloud: true, provider: 'Render' };
@@ -24,7 +24,7 @@ function detectEnvironment() {
   return { name: 'Ambiente Local (Bare-Metal / VM)', isCloud: false, provider: 'Localhost' };
 }
 
-// Formatação do Uptime
+// 2. Formatação de Tempo de Atividade (Uptime)
 function formatUptime(seconds) {
   const days = Math.floor(seconds / 86400);
   const hrs = Math.floor((seconds % 86400) / 3600);
@@ -33,15 +33,13 @@ function formatUptime(seconds) {
   return `${days > 0 ? days + 'd ' : ''}${hrs}h ${mins}m ${secs}s`;
 }
 
-// Métricas de Disco
-function getDiskInfo() {
-  // 3. Informações de Armazenamento (Disco)
+// 3. Métricas do Disco / Armazenamento (Sintaxe Otimizada)
 function getDiskInfo() {
   const isWin = os.platform() === 'win32';
   try {
     if (isWin) {
-      const psCommand = `powershell -command "Get-CimInstance Win32_LogicalDisk -Filter \\"DeviceID='C:'\\" | Select-Object Size,FreeSpace | ConvertTo-Json"`;
-      const output = execSync(psCommand, { encoding: 'utf-8', timeout: 3000 });
+      const psCmd = 'powershell -command "Get-CimInstance Win32_LogicalDisk -Filter \\"DeviceID=\'C:\'\\" | Select-Object Size,FreeSpace | ConvertTo-Json"';
+      const output = execSync(psCmd, { encoding: 'utf-8', timeout: 3000 });
       const data = JSON.parse(output);
       const totalGB = (data.Size / (1024 ** 3)).toFixed(2);
       const freeGB = (data.FreeSpace / (1024 ** 3)).toFixed(2);
@@ -49,7 +47,6 @@ function getDiskInfo() {
       const usedPercent = ((usedGB / totalGB) * 100).toFixed(1);
       return { totalGB, freeGB, usedGB, usedPercent, mountPoint: 'C:' };
     } else {
-      // Servidor Linux (Render / Railway / Koyeb)
       const stats = fs.statfsSync('/');
       const totalGB = ((stats.blocks * stats.bsize) / (1024 ** 3)).toFixed(2);
       const freeGB = ((stats.bfree * stats.bsize) / (1024 ** 3)).toFixed(2);
@@ -62,7 +59,7 @@ function getDiskInfo() {
   }
 }
 
-// Processos
+// 4. Contagem de Processos Ativos
 function getProcessCount() {
   const isWin = os.platform() === 'win32';
   try {
@@ -78,7 +75,7 @@ function getProcessCount() {
   }
 }
 
-// Display
+// 5. Informações de Vídeo e Ecrã
 function getDisplayInfo(env) {
   if (env.isCloud) {
     return { status: 'Headless (Virtual Container)', resolution: 'N/A', refreshRate: 'N/A' };
@@ -103,7 +100,7 @@ function getDisplayInfo(env) {
   return { status: 'Monitor Integrado', resolution: '1920 x 1080', refreshRate: '60 Hz' };
 }
 
-// Áudio
+// 6. Sub-sistema de Áudio
 function getAudioInfo(env) {
   if (env.isCloud) {
     return { device: 'Dispositivo Virtual', status: 'Sem Áudio (Servidor Nuvem)' };
@@ -121,7 +118,7 @@ function getAudioInfo(env) {
   return { device: 'Controlador de Áudio Padrão', status: 'Ativo' };
 }
 
-// Bateria e Alimentação
+// 7. Bateria e Energia
 function getPowerBatteryInfo(env) {
   if (env.isCloud) {
     return { source: 'Rede Elétrica Datacenter (AC)', batteryLevel: 'N/A', status: 'Energia Ininterrupta' };
@@ -142,7 +139,7 @@ function getPowerBatteryInfo(env) {
   return { source: 'Rede Elétrica / Bateria Integrada', batteryLevel: '100%', status: 'Alimentação Conectada' };
 }
 
-// Interfaces de Rede
+// 8. Interfaces de Rede
 function getNetworkInfo() {
   const nets = os.networkInterfaces();
   const results = [];
@@ -162,7 +159,7 @@ function getNetworkInfo() {
   };
 }
 
-// ENDPOINT API REST: Retorna as métricas em formato JSON
+// ENDPOINT API REST: Servidor de Métricas
 app.get('/api/metrics', (req, res) => {
   const env = detectEnvironment();
   const cpus = os.cpus();
@@ -218,11 +215,15 @@ app.get('/api/metrics', (req, res) => {
   });
 });
 
-// Fallback do Dashboard
+// Fallback para o Dashboard (Front-end)
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  const indexPath = path.join(__dirname, 'public', 'index.html');
+  if (fs.existsSync(indexPath)) {
+    return res.sendFile(indexPath);
+  }
+  res.redirect('/api/metrics');
 });
 
 app.listen(PORT, () => {
-  console.log(`[cloud-so-app] Servidor vintage iniciado em http://localhost:${PORT}`);
+  console.log(`[cloud-so-app] Servidor do Dashboard Executivo ativo na porta ${PORT}`);
 });
