@@ -307,6 +307,6 @@ A **Wiki do repositório** no GitHub foi estruturada em seções para aprofundam
 
 ---
 
-## 📜 Licença
+## 📄 Licença
 
-Este projeto está licenciado sob a Licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está sob a licença **MIT**. Para mais detalhes sobre os direitos de uso e distribuição, consulte o arquivo [LICENSE.md](LICENSE.md).
