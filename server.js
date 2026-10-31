@@ -7,7 +7,7 @@ const { execSync } = require('child_process');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Servir ficheiros estáticos da pasta 'public'
+// Servir arquivos estáticos da pasta 'public'
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Detecção do Ambiente (Local vs Cloud PaaS)
