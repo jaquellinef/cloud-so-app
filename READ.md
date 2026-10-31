@@ -7,19 +7,19 @@
 
 O **`cloud-so-app`** é uma aplicação web completa desenvolvida para diagnóstico, telemetria e análise em tempo real dos recursos de hardware e do **Sistema Operacional (SO)**, operando de forma transparente tanto em ambientes de desenvolvimento local (Bare-Metal / Máquina Virtual) quanto em plataformas de Nuvem como Serviço (**PaaS** - Render, Railway, Koyeb).
 
-Inspirado em consoles retro e teletipos clássicos dos anos 80, o sistema apresenta uma **interface visual vintage com ícones embutidos**, alternância de temas CRT (Fósforo Verde / Âmbar / Papel Antigo) e disponibila APIs JSON nativas para consumo automatizado.
+Inspirado em consoles retrô e teletipos clássicos dos anos 80, o sistema apresenta uma **interface visual víntage com ícones embutidos**, alternância de temas CRT (Fósforo Verde / Âmbar / Papel Antigo) e disponibiliza APIs JSON nativas para consumo automatizado.
 
 ---
 
 ## 🎯 1. Objetivo e Problema a Resolver
 
 ### 1.1 Objetivo
-Prover uma solução leve, independente e visualmente atrativa para inspecionar parâmetros de baixo nível do Sistema Operacional (uso de CPU, memória RAM, capacidade de disco, uptime do kernel, processos ativos, interfaces de rede e identificação de containerização) sem a necessidade de instalar agentes pesados de terceiros.
+Prover uma solução leve, independente e visualmente atrativa para inspecionar parâmetros de baixo nível do Sistema Operacional (uso de CPU, memória RAM, capacidade de disco, uptime do kernel, processos ativos, interfaces de rede e identificação de conteinerização) sem a necessidade de instalar agentes pesados de terceiros.
 
 ### 1.2 Problema que Pretende Resolver
 1. **Opacidade em Ambientes PaaS:** Em plataformas como Render e Railway, o desenvolvedor frequentemente não tem acesso direto aos dados do hardware hospedeiro nem às variáveis de isolamento do contêiner.
 2. **Dependência de Agentes de Monitoramento Complexos:** Ferramentas tradicionais de APM podem exigir configurações invasivas e consumo elevado de memória. O `cloud-so-app` executa via chamadas diretas ao Kernel utilizando módulos nativos do Node.js (`os`, `fs`, `child_process`).
-3. **Análise Comparativa Bare-Metal vs. Cloud:** Facilita a compreensão prática dos conceitos de Sistemas Operacionais, demonstrando visualmente como a virtualização e a containerização abstraem o hardware real.
+3. **Análise Comparativa Bare-Metal vs. Nuvem:** Facilita a compreensão prática dos conceitos de Sistemas Operacionais, demonstrando visualmente como a virtualização e a conteinerização abstraem o hardware real.
 
 ---
 
@@ -47,7 +47,7 @@ Prover uma solução leve, independente e visualmente atrativa para inspecionar 
 | :--- | :--- |
 | **RF-01** | O sistema deve coletar e exibir o *hostname*, plataforma (win32/linux), versão do kernel e arquitetura de CPU. |
 | **RF-02** | O sistema deve calcular o uso de memória RAM em gigabytes ($GB$) e a porcentagem de uso: $RAM_{USADA} = RAM_{TOTAL} - RAM_{LIVRE}$. |
-| **RF-03** | O sistema deve identificar o ambiente de hospedagem (Localhost, Render, Railway, Koyeb) inspecionando variáveis de ambiente. |
+| **RF-03** | O sistema deve identificar o ambiente de hospedagem (Localhost, Render, Railway) inspecionando variáveis de ambiente. |
 | **RF-04** | O sistema deve exibir o tempo de atividade acumulado do sistema (*uptime*) em dias, horas, minutos e segundos. |
 | **RF-05** | O sistema deve fornecer uma API REST pública no endpoint `/api/metrics` retornando todas as métricas em formato JSON. |
 | **RF-06** | O sistema deve disponibilizar um endpoint de healthcheck em `/health`. |
@@ -58,7 +58,7 @@ Prover uma solução leve, independente e visualmente atrativa para inspecionar 
 | Código | Descrição do Requisito Não-Funcional |
 | :--- | :--- |
 | **RNF-01** | **Desempenho:** O tempo de resposta das requisições deve ser inferior a 200 ms. |
-| **RNF-02** | **Portabilidade:** A aplicação deve funcionar perfeitamente em sistemas Windows e Linux sem alteração de código. |
+| **RNF-02** | **Portabilidade:** A aplicação deve funcionar perfeitamente em sistemas Windows e Linux sem alteração do código. |
 | **RNF-03** | **Segurança e Isolamento:** Não deve permitir execução de comandos shell arbitrários via entrada do usuário. |
 | **RNF-04** | **Consumo de Recursos:** O consumo de memória RAM do processo Node.js não deve exceder 50 MB de Heap. |
 
@@ -300,9 +300,9 @@ A **Wiki do repositório** no GitHub foi estruturada em seções para aprofundam
 ### Páginas da Wiki:
 1. **`Home`**: Apresentação da Wiki e guia rápido de navegação.
 2. **`Conceitos-de-SO-e-Kernel`**: Explicação teórica sobre chamadas de sistema (*system calls*), gerenciamento de processos (PCB) e algoritmos de escalonamento.
-3. **`Virtualizacao-vs-Containerizacao`**: Estudo comparativo detalhado das diferenças entre os resultados obtidos em execuções *Bare-Metal* no Windows e contêineres Linux PaaS.
-4. **`Guia-Estilizacao-Vintage`**: Especificações de design, variáveis CSS3 e conjunto de ícones SVG utilizados no tema retrô CRT.
-5. **`Troubleshooting-e-FAQ`**: Soluções para problemas comuns de permissão de acesso a métricas do sistema e portas em uso.
+3. **`Virtualização x Conteinerização`**: Estudo comparativo detalhado das diferenças entre os resultados obtidos em execuções *Bare-Metal* no Windows e contêineres Linux PaaS.
+4. **`Guia de Estilização: Vintage`**: Especificações de design, variáveis CSS3 e conjunto de ícones SVG utilizados no tema retrô CRT.
+5. **`Troubleshooting e FAQ`**: Soluções para problemas comuns de permissão de acesso a métricas do sistema e portas em uso.
 
 ---
 
