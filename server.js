@@ -35,13 +35,13 @@ function formatUptime(seconds) {
 
 // Métricas de Disco
 function getDiskInfo() {
+  // 3. Informações de Armazenamento (Disco)
+function getDiskInfo() {
   const isWin = os.platform() === 'win32';
   try {
     if (isWin) {
-      const output = execSync(
-        'powershell -command "Get-CimInstance Win32_LogicalDisk -Filter \\"DeviceID=\\'C:\\'\\" | Select-Object Size,FreeSpace | ConvertTo-Json"',
-        { encoding: 'utf-8', timeout: 3000 }
-      );
+      const psCommand = `powershell -command "Get-CimInstance Win32_LogicalDisk -Filter \\"DeviceID='C:'\\" | Select-Object Size,FreeSpace | ConvertTo-Json"`;
+      const output = execSync(psCommand, { encoding: 'utf-8', timeout: 3000 });
       const data = JSON.parse(output);
       const totalGB = (data.Size / (1024 ** 3)).toFixed(2);
       const freeGB = (data.FreeSpace / (1024 ** 3)).toFixed(2);
@@ -49,6 +49,7 @@ function getDiskInfo() {
       const usedPercent = ((usedGB / totalGB) * 100).toFixed(1);
       return { totalGB, freeGB, usedGB, usedPercent, mountPoint: 'C:' };
     } else {
+      // Servidor Linux (Render / Railway / Koyeb)
       const stats = fs.statfsSync('/');
       const totalGB = ((stats.blocks * stats.bsize) / (1024 ** 3)).toFixed(2);
       const freeGB = ((stats.bfree * stats.bsize) / (1024 ** 3)).toFixed(2);
