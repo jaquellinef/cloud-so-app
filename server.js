@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 // Servir ficheiros estáticos da pasta 'public'
 app.use(express.static(path.join(__dirname, 'public')));
 
-// 1. Deteção do Ambiente de Execução (Local vs Cloud PaaS)
+// Ambiente de Execução (Local vs Cloud PaaS)
 function detectEnvironment() {
   if (process.env.RENDER || process.env.RENDER_SERVICE_ID) {
     return { name: 'Render (Cloud PaaS)', isCloud: true, provider: 'Render' };
@@ -24,7 +24,7 @@ function detectEnvironment() {
   return { name: 'Ambiente Local (Bare-Metal / VM)', isCloud: false, provider: 'Localhost' };
 }
 
-// 2. Formatação de Tempo de Atividade (Uptime)
+// Formatação de Uptime
 function formatUptime(seconds) {
   const days = Math.floor(seconds / 86400);
   const hrs = Math.floor((seconds % 86400) / 3600);
@@ -33,7 +33,7 @@ function formatUptime(seconds) {
   return `${days > 0 ? days + 'd ' : ''}${hrs}h ${mins}m ${secs}s`;
 }
 
-// 3. Métricas do Disco / Armazenamento (Sintaxe Otimizada)
+// Métricas do Disco / Armazenamento
 function getDiskInfo() {
   const isWin = os.platform() === 'win32';
   try {
@@ -59,7 +59,7 @@ function getDiskInfo() {
   }
 }
 
-// 4. Contagem de Processos Ativos
+// Contagem de Processos Ativos
 function getProcessCount() {
   const isWin = os.platform() === 'win32';
   try {
@@ -75,7 +75,7 @@ function getProcessCount() {
   }
 }
 
-// 5. Informações de Vídeo e Ecrã
+// Informações de Vídeo e Tela
 function getDisplayInfo(env) {
   if (env.isCloud) {
     return { status: 'Headless (Virtual Container)', resolution: 'N/A', refreshRate: 'N/A' };
@@ -100,7 +100,7 @@ function getDisplayInfo(env) {
   return { status: 'Monitor Integrado', resolution: '1920 x 1080', refreshRate: '60 Hz' };
 }
 
-// 6. Sub-sistema de Áudio
+// Áudio
 function getAudioInfo(env) {
   if (env.isCloud) {
     return { device: 'Dispositivo Virtual', status: 'Sem Áudio (Servidor Nuvem)' };
@@ -118,7 +118,7 @@ function getAudioInfo(env) {
   return { device: 'Controlador de Áudio Padrão', status: 'Ativo' };
 }
 
-// 7. Bateria e Energia
+// Bateria e Energia
 function getPowerBatteryInfo(env) {
   if (env.isCloud) {
     return { source: 'Rede Elétrica Datacenter (AC)', batteryLevel: 'N/A', status: 'Energia Ininterrupta' };
@@ -139,7 +139,7 @@ function getPowerBatteryInfo(env) {
   return { source: 'Rede Elétrica / Bateria Integrada', batteryLevel: '100%', status: 'Alimentação Conectada' };
 }
 
-// 8. Interfaces de Rede
+// Interfaces de Rede
 function getNetworkInfo() {
   const nets = os.networkInterfaces();
   const results = [];
