@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cloud-so-app | Dashboard Vintage CRT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="theme-crt-amber">
+  <div class="crt-overlay"></div>
+  
+  <div class="container">
+    <header class="vintage-header">
+      <div class="header-top">
+        <div class="terminal-badge">
+          <span class="blinking-dot">●</span> SYSTEM MONITOR v2.0 // TERMINAL #01
+        </div>
+        <div class="theme-selector">
+          <label for="themeSelect">ESTILO VINTAGE:</label>
+          <select id="themeSelect">
+            <option value="theme-crt-amber">CRT Âmbar (1978)</option>
+            <option value="theme-crt-green">CRT Verde Fósforo (1982)</option>
+            <option value="theme-parchment">Papel Teleimpressor (1965)</option>
+          </select>
+        </div>
+      </div>
+      <h1>
+        PAINEL DE CONTROLO DO SISTEMA OPERATIVO
+      </h1>
+      <p class="subtitle">
+        Aplicação: <strong>cloud-so-app</strong> | Provedor: <span id="envName">A carregar...</span>
+      </p>
+    </header>
+
+    <div class="status-bar">
+      <div class="status-card">
+        <div class="card-info">
+          <span class="label">ESTADO GERAL</span>
+          <span class="val" id="sysStatus">---</span>
+        </div>
+      </div>
+
+      <div class="status-card">
+        <div class="card-info">
+          <span class="label">MEMÓRIA RAM</span>
+          <span class="val" id="ramPercent">0%</span>
+          <div class="progress-bar-bg"><div class="progress-bar-fill" id="ramFill"></div></div>
+        </div>
+      </div>
+
+      <div class="status-card">
+        <div class="card-info">
+          <span class="label">UPTIME (TEMPO LIGADO)</span>
+          <span class="val" id="sysUptime">0h 0m 0s</span>
+        </div>
+      </div>
+
+      <div class="status-card">
+        <div class="card-info">
+          <span class="label">ENDEREÇO IP PRINCIPAL</span>
+          <span class="val" id="mainIP">0.0.0.0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-header">
+          <h3>SO & AMBIENTE DA NUVEM</h3>
+        </div>
+        <ul>
+          <li><span>Hostname:</span> <strong id="valHostname">...</strong></li>
+          <li><span>Plataforma (SO):</span> <strong id="valPlatform">...</strong></li>
+          <li><span>Versão do Kernel:</span> <strong id="valKernel">...</strong></li>
+          <li><span>Arquitetura:</span> <strong id="valArch">...</strong></li>
+          <li><span>Versão do Node.js:</span> <strong id="valNode">...</strong></li>
+          <li><span>Porta Ativa:</span> <strong id="valPort">...</strong></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>PROCESSADOR (CPU)</h3>
+        </div>
+        <ul>
+          <li><span>Modelo da CPU:</span> <strong id="valCpuModel">...</strong></li>
+          <li><span>Núcleos (vCPUs):</span> <strong id="valCpuCores">...</strong></li>
+          <li><span>Processos Ativos:</span> <strong id="valProcessCount">...</strong></li>
+          <li><span>PID do Processo:</span> <strong id="valPid">...</strong></li>
+          <li><span>Node Heap Alocado:</span> <strong id="valHeap">...</strong></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>MEMÓRIA & DISCO</h3>
+        </div>
+        <ul>
+          <li><span>RAM Total:</span> <strong id="valRamTotal">...</strong></li>
+          <li><span>RAM Livre:</span> <strong id="valRamFree">...</strong></li>
+          <li><span>RAM Em Uso:</span> <strong id="valRamUsed">...</strong></li>
+          <li><span>Ponto de Montagem:</span> <strong id="valDiskMount">...</strong></li>
+          <li><span>Espaço Livre em Disco:</span> <strong id="valDiskFree">...</strong></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>VÍDEO, SOM & ENERGIA</h3>
+        </div>
+        <ul>
+          <li><span>Ecrã / Display:</span> <strong id="valDisplay">...</strong></li>
+          <li><span>Resolução:</span> <strong id="valResolution">...</strong></li>
+          <li><span>Placa de Som:</span> <strong id="valAudio">...</strong></li>
+          <li><span>Fonte de Alimentação:</span> <strong id="valPower">...</strong></li>
+          <li><span>Bateria:</span> <strong id="valBattery">...</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="vintage-footer">
+      <p>⚡ MONITOR DE SISTEMAS OPERATIVOS // TEMA VINTAGE // TELETYPE & CRT SIMULATOR ⚡</p>
+      <p>Atualização automática a cada 5 segundos • API REST: <code>/api/metrics</code></p>
+    </footer>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
